@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 function SearchBox() {
   const dispatch = useDispatch();
+
   const value = useSelector(selectNameFilter);
 
   const handleChange = (evt) => {
