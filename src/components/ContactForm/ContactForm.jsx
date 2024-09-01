@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import css from "./ContactForm.module.css";
 import { FaUserPlus } from "react-icons/fa";
 
-import { addContact } from "../../redux/contacts/contactsOps";
+import { addContact } from "../../redux/contactsOps";
 
 const phoneRegExp = /^[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}$/;
 const validationSchema = Yup.object().shape({

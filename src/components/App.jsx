@@ -9,7 +9,7 @@ import {
   selectLoading,
 } from "../redux/contacts/contacts.selectors";
 import { useEffect } from "react";
-import { fetchContacts } from "../redux/contacts/contactsOps";
+import { fetchContacts } from "../redux/contactsOps";
 
 function App() {
   const loading = useSelector(selectLoading);
@@ -26,11 +26,9 @@ function App() {
 
       <SearchBox />
       <div>
-        {loading && <Loader />}
+        {loading && !error && <Loader />}
         {error !== null && (
-          <p style={{ color: "red", textAlign: "center" }}>
-            {error}. Please, try again later.
-          </p>
+          <p style={{ color: "red", textAlign: "center" }}>{error}</p>
         )}
       </div>
       <ContactList />
